@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { User, userLocalStorageKey } from "./model/User";
 import { AppWrapper } from "./AppWrapper";
+import "./App.scss";
+import { Layout } from "./components/Layout";
 
 function App() {
   const [user, setUser] = useState<User>();
@@ -13,7 +15,9 @@ function App() {
 
   return (
     <BrowserRouter>
-      <AppWrapper user={user} />
+      <Layout>
+        <AppWrapper user={user} setUser={setUser} />
+      </Layout>
     </BrowserRouter>
   );
 }

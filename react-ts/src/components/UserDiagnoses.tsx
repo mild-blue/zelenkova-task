@@ -1,4 +1,8 @@
-export const UserDiagnoses = () => {
+type Props = {
+  diagnoses: string[];
+};
+
+export const UserDiagnoses = ({ diagnoses }: Props) => {
   /**
    * TODO
    *
@@ -6,5 +10,11 @@ export const UserDiagnoses = () => {
    *    - Props will contain list of user's diagnoses
    * 2. Display list of user diagnoses (see Todo)
    */
-  return <div>Todo: Display list of user diagnoses here.</div>;
+  const listDiagnoses = diagnoses.map((diagnose, index) => <li key={index}>{diagnose}</li>);
+
+  return (
+    <div>
+      <ul>{listDiagnoses}</ul>
+    </div>
+  );
 };

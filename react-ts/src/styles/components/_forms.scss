@@ -1,0 +1,23 @@
+.form {
+  &-item {
+    display: grid;
+    gap: 0.3em 0;
+    margin-bottom: 0.5rem;
+  }
+
+  &-input {
+    border: 1px solid $color-primary;
+    background-color: $color-white;
+    color: $color-primary;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    height: 2.5rem;
+    width: 100%;
+    min-width: 13rem;
+  }
+
+  &-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+}
