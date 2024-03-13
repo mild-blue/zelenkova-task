@@ -1,0 +1,41 @@
+.pg-login {
+  width: 100%;
+  height: 100vh;
+  color: $color-white;
+  padding: 1.5rem 0;
+
+  @include min($tablet) {
+    display: grid;
+    place-content: center;
+  }
+
+  &__content {
+    border: 1px solid #ffffff50;
+    border-radius: 0.625rem;
+    padding: 1.5rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+
+    @include min(768px) {
+      padding: 3rem;
+    }
+  }
+
+  &__img {
+    width: 5rem;
+  }
+
+  &__title {
+    margin: 2rem 0;
+  }
+
+  &__form {
+    &__btn {
+      display: block;
+      margin: 2rem auto 0;
+    }
+  }
+}

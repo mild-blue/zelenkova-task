@@ -6,9 +6,10 @@ import { User } from "./model/User";
 
 type Props = {
   user?: User;
+  setUser: (user: User) => void;
 };
 
-export const AppWrapper = ({ user }: Props) => {
+export const AppWrapper = ({ user, setUser }: Props) => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -18,7 +19,7 @@ export const AppWrapper = ({ user }: Props) => {
   return (
     <Routes>
       <Route path={"/home"} element={<Home />} />
-      <Route path={"*"} element={<Login />} />
+      <Route path={"*"} element={<Login setUser={setUser} />} />
     </Routes>
   );
 };
